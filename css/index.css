@@ -7,7 +7,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow: hidden;
 }
 
 body {
@@ -65,12 +64,53 @@ button {
   width: 49.75%;
 }
 .spring .bar {
-  width: 0.5%;
+  width: 1%;
   height: 7rem;
 }
 
 .spring.right {
   flex-direction: row-reverse;
+}
+
+.title__container {
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+.title__container h2 {
+  color: white;
+}
+.title__container p {
+  color: rgb(153, 153, 153);
+}
+
+h3 {
+  color: white;
+}
+
+p {
+  color: rgb(129, 128, 128);
+}
+
+.design {
+  position: relative;
+}
+.design .background {
+  height: 10rem;
+  width: 12rem;
+  background: linear-gradient(to right, #c5e35b, #45b649);
+  position: absolute;
+  z-index: -1;
+  left: -10px;
+  top: -8px;
+}
+
+.right .background {
+  top: auto;
+  left: auto;
+  right: 10px;
+  bottom: -8%;
 }
 
 .navbar {
@@ -144,4 +184,130 @@ button {
   width: 45vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.about .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.about .container .image img {
+  height: 25rem;
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.about .container .play {
+  position: absolute;
+  top: 30%;
+  cursor: pointer;
+}
+.about .container .play i {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10rem;
+}
+
+.skills .content {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.skills .content .skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.circular {
+  height: 100px;
+  width: 100px;
+  position: relative;
+}
+.circular .inner {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #0b0b0b;
+  border-radius: 100%;
+}
+.circular .number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 12;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(153, 153, 153);
+}
+.circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: var(--gradient);
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+  transform: rotate(250deg);
+}
+
+.three .bar {
+  clip: rect(48px, 100px, 100px, 30px);
+}
+
+.two .bar,
+.four .bar {
+  clip: unset;
+}
+
+.portfolio {
+  position: relative;
+}
+.portfolio .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  color: white;
+  gap: 2rem;
+}
+.portfolio .container .portfolio__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background-color: #181818;
+  padding: 2rem;
+  text-align: center;
+}
+.portfolio .container .portfolio__container .image {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+.portfolio .container .portfolio__container .image img {
+  width: 100%;
+  height: auto;
+  z-index: 0;
+  top: 0%;
+  left: 0;
+  position: absolute;
+  transition: top 3s;
+  -webkit-transition: bottom 3s;
+  -moz-transition: bottom 3s;
+  -ms-transition: bottom 3s;
+  -o-transition: bottom 3s;
+}
+.portfolio .container .portfolio__container .image img:hover {
+  top: -300%;
+  transition: all 3s;
 }/*# sourceMappingURL=index.css.map */
