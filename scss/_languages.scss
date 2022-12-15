@@ -1,0 +1,28 @@
+.languages{
+    .container{
+        display: flex; 
+        justify-content: center;
+        gap: 4rem;
+        .language{
+            img{
+                //ojo con la intereacción de los siguientes elementos
+                height: 10rem;
+                filter: brightness(0) invert(1);
+                transition: 0.5s ease-in-out;
+                &:hover{
+                    // filter: none;
+                     filter:brightness(3) invert(3.5); 
+                     transition: 0.2s ease-in-out;
+                }
+            }
+            &:nth-of-type(4){
+                img{
+                    filter: grayscale(100) invert(1);
+                    &:hover{
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+}
